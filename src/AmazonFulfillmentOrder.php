@@ -1,6 +1,6 @@
-<?php namespace Sonnenglas\AmazonMws;
+<?php namespace robertbennettuk\AmazonMws;
 
-use Sonnenglas\AmazonMws\AmazonOutboundCore;
+use robertbennettuk\AmazonMws\AmazonOutboundCore;
 
 /**
  * Copyright 2013 CPI Group, LLC

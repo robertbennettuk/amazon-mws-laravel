@@ -1,6 +1,6 @@
-<?php namespace Sonnenglas\AmazonMws;
+<?php namespace robertbennettuk\AmazonMws;
 
-use Sonnenglas\AmazonMws\AmazonOutboundCore;
+use robertbennettuk\AmazonMws\AmazonOutboundCore;
 
 /**
  * Copyright 2013 CPI Group, LLC
@@ -290,6 +290,35 @@ class AmazonFulfillmentOrderCreator extends AmazonOutboundCore
             return false;
         }
     }
+
+
+
+
+    /**
+     * Sets the fulfilment action. (Optional)
+     *
+     * This method sets the Fulfillment Acton to be sent in the next request.
+     * If this parameter is not set, Amazon will assume a <i>Ship</i> method.
+     * @param string $s <p>"Ship" or "Hold"</p>
+     * @return boolean <b>FALSE</b> if improper input
+     */
+    public function setFulfilmentAction($s)
+    {
+        if (is_string($s)) {
+            if ($s == 'Ship' || $s == 'Hold') {
+                $this->options['FulfillmentAction'] = $s;
+                return true;
+            } else {
+                $this->log("Tried to set fulfillment action to invalid value", 'Warning');
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
+
+
+
 
     /**
      * Sets the fulfillment method. (Optional)

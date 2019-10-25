@@ -1,7 +1,7 @@
 <?php 
-namespace Sonnenglas\AmazonMws;
+namespace robertbennettuk\AmazonMws;
  
-use Sonnenglas\AmazonMws\AmazonFeedsCore;
+use robertbennettuk\AmazonMws\AmazonFeedsCore;
 
 /**
  * Copyright 2013 CPI Group, LLC
